@@ -1,0 +1,340 @@
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #000;
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow: inset 0 0 0px 0px #ff000000;
+}
+
+:root {
+  --background-color-light: #f0f2f5;
+  --background-color-dark: #18191a;
+  --text-color-light: #000;
+  --text-color-dark: #e4e6eb;
+  --primary-color: #4267b2;
+  --accent-color: #b3b3b3;
+  --logo-red: #ff4b4b;
+  --logo-yellow: #ffdb4b;
+  --logo-green: #4bff4b;
+  --logo-blue: #4b7bff;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: "Montserrat", Arial, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+}
+
+body.light-theme {
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+}
+
+body.dark-theme {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+.header {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.navbar-left,
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-left img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.navbar-left span,
+.navbar-right select,
+.navbar-right button {
+  color: #fff;
+  font-size: 16px;
+}
+
+.navbar-right select,
+.navbar-right button {
+  margin-left: 15px;
+}
+
+.navbar-right select {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navbar-right select:hover {
+  background-color: #365899;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 15px;
+  font-size: 16px;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+#searchBar {
+  width: 200px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+.sidebar {
+  width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-right: 20px;
+}
+
+.sidebar.dark-theme {
+  background-color: #242526;
+  color: var(--text-color-dark);
+}
+
+.create-post h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #365899;
+}
+
+.feed-container {
+  width: 600px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.post {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.post.dark-theme {
+  background-color: #242526;
+  color: var(--text-color-dark);
+}
+
+.post h3 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.post p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.post .delete-post {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: var(--logo-red);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.post .delete-post:hover {
+  background-color: #d32f2f;
+}
+
+.theme-toggle-button {
+  padding: 5px 10px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.theme-toggle-button:hover {
+  background-color: #365899;
+}
+
+body.dark-theme .sidebar {
+  background-color: #242526;
+  color: var(--text-color-dark);
+}
+
+body.dark-theme .post {
+  background-color: #242526;
+  color: var(--text-color-dark);
+}
+
+body.dark-theme .form-group input[type="text"],
+body.dark-theme .form-group textarea {
+  background-color: #3a3b3c;
+  border: 1px solid #ddd;
+  color: var(--text-color-dark);
+}
+
+body.dark-theme .form-group input[type="text"]::placeholder,
+body.dark-theme .form-group textarea::placeholder {
+  color: var(--text-color-dark);
+}
+
+.post #created-at {
+  font-size: 12px;
+  color: #80863f;
+  margin-top: 5px;
+}
+
+.search-and-sort {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-and-sort input {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.search-and-sort button {
+  padding: 5px 10px;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+#logoutButton {
+  background-color: rgb(204, 38, 38);
+}
+
+#pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#pagination button {
+  margin: 0 5px;
+  padding: 5px 10px;
+}
+
+#pagination button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.post-actions {
+  margin-top: 10px;
+}
+
+.post-actions button {
+  margin-right: 10px;
+}
+
+/* Add these styles to the existing styles.css */
+
+/* Style for like and dislike buttons */
+.like-post,
+.dislike-post {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.like-post:hover,
+.dislike-post:hover {
+  background-color: #365899;
+}
+
+.like-count,
+.dislike-count {
+  font-weight: bold;
+}

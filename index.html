@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post Application</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="navbar">
+        <div class="navbar-left">
+          <img src="image (3).png" alt="Logo" />
+          <span id="userName">User | </span>
+        </div>
+        <div class="navbar-right">
+          <input
+            type="text"
+            id="searchBar"
+            placeholder="Search by author name..."
+          />
+          <button id="sortNewest">Sort by Newest</button>
+          <button id="sortOldest">Sort by Oldest</button>
+          <button id="themeToggleButton">Toggle Theme</button>
+          <select id="languageSwitcher">
+            <option value="en">English</option>
+            <option value="ka">ქართული</option>
+          </select>
+          <button id="logoutButton" style="display: none">Logout</button>
+        </div>
+      </div>
+    </header>
+    <div class="main-container">
+      <div class="sidebar">
+        <h2>Create a New Post</h2>
+        <form id="postForm">
+          <div class="form-group">
+            <label for="postTitle">Title:</label>
+            <input type="text" id="postTitle" required />
+          </div>
+          <div class="form-group">
+            <label for="postContent">Content:</label>
+            <textarea id="postContent" required></textarea>
+          </div>
+          <button type="submit">Create Post</button>
+        </form>
+      </div>
+      <div class="feed-container">
+        <div id="content" class="content"></div>
+      </div>
+      <div id="pagination"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
